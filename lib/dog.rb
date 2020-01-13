@@ -13,9 +13,10 @@ end
     @@all
 end
   
-  def self.print_all
-    @@all.each { |dog| dog.name #{name} }
-    
+  def self.print_all(name)
+    @@all.detect { |dog| dog.name == name }
+    puts "#{name}"
+  end
   end
   
   def self.clear_all
